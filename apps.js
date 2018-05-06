@@ -3,7 +3,11 @@
   'use strict';
 
   angular.module('LunchCheck',[])
-  .controller('LunchCheckController',function($scope)
+  .controller('LunchCheckController',LunchCheckController);
+
+LunchCheckController.$inject = ['$scope'];
+
+function LunchCheckController($scope)
 {
 $scope.userInput = "";
 $scope.totalNumberOfItems = "";
@@ -36,7 +40,7 @@ function DisplayMessage(value)
   $scope.OutputText = "Enjoy!";
   else if(value > 3)
   $scope.OutputText = "Too Much!"
-}
+};
 
-});
+}
 })();
